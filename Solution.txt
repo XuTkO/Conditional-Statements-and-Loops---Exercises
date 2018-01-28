@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int firstNumber = Integer.parseInt(scanner.nextLine());
+        int secondNumber = Integer.parseInt(scanner.nextLine());
+
+        int firstGeneratedNumber = 0;
+        int secondGeneratedNumber = 0;
+        int thirdGeneratedNumber = 0;
+        int fourthGeneratedNumber = 0;
+        int fifthGeneratedNumber = 0;
+
+        int counter = 0;
+
+        for (int a = firstNumber; a <= secondNumber; a++) {
+            firstGeneratedNumber = a;
+            for (int b = firstNumber; b <= secondNumber; b++) {
+                secondGeneratedNumber = b;
+                for (int c = firstNumber; c <= secondNumber; c++) {
+                    thirdGeneratedNumber = c;
+                    for (int d = firstNumber; d <= secondNumber; d++) {
+                        fourthGeneratedNumber = d;
+                        for (int e = firstNumber; e <= secondNumber; e++) {
+                            fifthGeneratedNumber = e;
+                            if (firstGeneratedNumber >= firstNumber && secondGeneratedNumber > firstGeneratedNumber
+                                    && thirdGeneratedNumber > secondGeneratedNumber && fourthGeneratedNumber > thirdGeneratedNumber
+                                    && fifthGeneratedNumber > fourthGeneratedNumber && fifthGeneratedNumber <= secondNumber) {
+                                System.out.printf("%d %d %d %d %d%n", firstGeneratedNumber, secondGeneratedNumber, thirdGeneratedNumber,
+                                        fourthGeneratedNumber, fifthGeneratedNumber);
+                                counter++;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        if (counter==0){
+            System.out.println("No");
+        }
+    }
+}
